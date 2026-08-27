@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOB WEB DEMO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/new.html" aria-label="navigation">    
+                <img src="logo.png" alt="LOGO">
+            </a>
+            <ul>
+                <li><a href="new.html">jobs</a></li>
+                <li><a href="new.html">companies</a></li>
+                <li><a href="new.html">remote jobs</a></li>
+                <li><a href="new.html">about us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--search bar-->
+        <form role="search">
+            <label for="JOB-SEARCH">SEARCH HERE</label>
+            <input type="search" id="JOB-SEARCH" name="search" placeholder="Search your job...">
+            <button type="submit" > SEARCH </button>
+
+        </form>
+        <!--filter-->
+        <section aria-label="Job-filters">
+            <h3>FILTERS</h3>
+            <form>
+
+            
+                <fieldset>
+                    <legend>JOB-TYPE</legend>
+                    <div>
+                        <input type="checkbox" id="FULL-TIME" name="JOB-TYPE" value="FULL-TIME" aria-pressed="false">
+                        <label for="FULL-TIME">Full-Time</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="PART-TIME" name="JOB-TYPE" value="PART-TIME" aria-pressed="false">
+                        <label for="PART-TIME">Part-Time</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="INTERNSHIP" name="JOB-TYPE" value="INTERNSHIP" aria-pressed="false">
+                        <label for="INTERNSHIP">Internship</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>LOCATION</legend>
+                    <div>
+                        <input type="checkbox" id="REMOTE" name="LOCATION" value="REMOTE" aria-pressed="false">
+                        <label for="REMOTE">Remote</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ON-SITE" name="LOCATION" value="ON-SITE" aria-pressed="false">
+                        <label for="ON-SITE">On Site</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="SEMI-REMOTE" name="LOCATION" value="SEMI-REMOTE" aria-pressed="false">
+                        <label for="SEMI-REMOTE">Semi Remote  </label>
+                    </div>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>EXP-LEVEL</legend>
+                    <div>
+                        <input type="checkbox" id="BEGINNER" name="EXP-LEVEL" value="BEGINNER" aria-pressed="false">
+                        <label for="BEGINNER">Beginner</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="INTERMEDIATE" name="EXP-LEVEL" value="INTERMEDIATE" aria-pressed="false">
+                        <label for="INTERMEDIATE">Intermediate</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ADVANCED" name="EXP-LEVEL" value="ADVANCED" aria-pressed="false">
+                        <label for="ADVANCED">Advanced</label>
+                    </div>
+                </fieldset>
+                <button type="reset">CLEAR ALL</button>
+
+
+            </form>
+
+        </section>
+<!--job cards-->
+        <section aria-label="Available jobs">
+            <h2>AVAILABLE JOBS</h2>
+            <div role="status" aria-live="polite">
+                showing 6 jobs
+            </div>
+            <ul role="list">
+<!--job 1-->
+                <li role="listitem">
+                    <article>
+                        <strong> 1 COMPANY.pvt LTD</strong>
+                        <h3>FRONTEND DEVELOPER</h3>
+                        <p>GANDHINAGAR, GUJARAT</p>
+                        <p>rs 50,000 - 70,000/month</p>
+                        <ul role="list">
+                            <li>FULL TIME</li>
+                            <li>REMOTE</li>
+                            <li>BEGINNER</li>
+                        </ul>
+                        <p> POSTED ON 
+                            <time datetime="2026-08-24">
+                                August 24, 2026
+                            </time>
+                        </p>
+                        <a href="new.html" aria-label="apply for frontend developer at company 1 in gandhinagar gujarat at the salary hike of rs 50,000 - 70,000/month">
+                            APPLY
+                        </a>
+                    </article>
+                </li>
+<!--job 2-->
+                <li role="listitem">
+                    <article>
+                        <strong> 2 COMPANY.pvt LTD</strong>
+                        <h3>BACKEND DEVELOPER</h3>
+                        <p>AHMEDABAD, GUJARAT</p>
+                        <p>rs 60,000 - 80,000/month</p>
+                        <ul role="list">
+                            <li>FULL TIME</li>
+                            <li>ON-SITE</li>
+                            <li>INTERMEDIATE</li>   
+                        </ul>
+                        <p> POSTED ON
+                            <time datetime="2026-08-22">
+                                August 22,2026
+                            </time>
+                        </p>
+                        <a href="new.html" aria-label="apply for backend developer at company 2 in ahmedabad gujarat at a salary hike of rs 60,000 - 80,000/month">
+                            APPLY
+                        </a>           
+
+                    </article>
+                </li>
+<!--job 3-->
+                <li role="listitem">
+                    <article>
+                        <strong> 3 COMPANY.pvt LTD</strong>
+                        <h3>DEVOPS ENGINEER</h3>
+                        <p>DELHI, DELHI</p>
+                        <p>rs 70,000 - 90,000/month</p>
+                        <ul role="list">
+                            <li>FULL TIME</li>
+                            <li>REMOTE</li>
+                            <li>ADVANCED</li>
+                        </ul>
+                        <p> POSTED ON
+                            <time datetime="2026-08-20">
+                                August 20, 2026
+                            </time>
+                        </p>
+                        <a href="new.html" aria-label="apply for devops engineer at company 3 in delhi delhi at a salary hike of rs 70,000 - 90,000/month">
+                            APPLY
+                        </a>
+                    </article>
+                </li>
+<!--job 4-->
+                <li role="listitem">
+                    <article>
+                        <strong> 4 COMPANY.pvt LTD</strong>
+                        <h3>DATA SCIENTIST</h3>
+                        <p>MUMBAI, MAHARASHTRA</p>
+                        <p>rs 80,000 - 100,000/month</p>
+                        <ul role="list">
+                            <li>FULL TIME</li>
+                            <li>SEMI-REMOTE</li>
+                            <li>INTERMEDIATE</li>
+                        </ul>
+                        <p> POSTED ON
+                            <time datetime="2026-08-18">
+                                August 18, 2026
+                            </time>
+                        </p>
+                        <a href="new.html" aria-label="apply for data scientist at company 4 in mumbai maharashtra at a salary hike of rs 80,000 - 100,000/month">
+                            APPLY
+                        </a>
+                    </article>
+                </li>
+<!--job 5-->
+                <li role="listitem">
+                    <article>
+                        <strong> 5 COMPANY.pvt LTD</strong>
+                        <h3>UI/UX DESIGNER</h3>
+                        <p>PUNE, MAHARASHTRA</p>
+                        <p>rs 55,000 - 75,000/month</p>
+                        <ul role="list">
+                            <li>PART TIME</li>
+                            <li>ON-SITE</li>
+                            <li>BEGINNER</li>
+                        </ul>
+                        <p> POSTED ON
+                            <time datetime="2026-08-16">
+                                August 16, 2026
+                            </time>
+                        </p>
+                        <a href="new.html" aria-label="apply for ui/ux designer at company 5 in pune maharashtra at a salary hike of rs 55,000 - 75,000/month">
+                            APPLY
+                        </a>
+                    </article>
+                </li>
+<!--job 6-->
+                <li role="listitem">
+                    <article>
+                        <strong> 6 COMPANY.pvt LTD</strong>
+                        <h3>MOBILE APP DEVELOPER</h3>
+                        <p>BANGALORE, KARNATAKA</p>
+                        <p>rs 65,000 - 85,000/month</p>
+                        <ul role="list">
+                            <li>FULL TIME</li>
+                            <li>REMOTE</li>
+                            <li>INTERMEDIATE</li>
+                        </ul>
+                        <p> POSTED ON
+                            <time datetime="2026-08-14">
+                                August 14, 2026
+                            </time>
+                        </p>
+                        <a href="new.html" aria-label="apply for mobile app developer at company 6 in bangalore karnataka at a salary hike of rs 65,000 - 85,000/month">
+                            APPLY
+                        </a>
+                    </article>
+                </li>
+            </ul>
+        </article>
+
+        <!--job detail pannel -->
+        <aside aria-label="Job Details">
+            <h2>FRONT END DEVELOPER</h2>
+            <p>
+                GOOGLE - GANDHINAGAR, GUJ
+            </p>
+            <section>
+                <h3>JOB DESCRIPTION</h3>
+                <p>
+                    We are looking for a skilled Frontend Developer to join our dynamic team.
+                </p>
+            </section>
+            <section>
+                <h3>RESPONSIBILITIES</h3>
+                <p>
+                    - Develop and maintain web applications using modern frontend technologies.
+                    - Collaborate with design and backend teams to implement user-facing features.
+                </p>
+            </section>
+            <section>
+                <h3>QUALIFICATIONS</h3>
+                <p>
+                    - Bachelor's degree in Computer Science or related field.
+                    - Proficiency in HTML, CSS, JavaScript, and frontend frameworks.
+                </p>
+            </section>
+            <a href="new.html" aria-label="Apply for Frontend developer at google with all the qualifications and requirements.">
+                APPLY NOW 
+            </a>
+        </aside>
+        <aside aria-label="Job Details">
+            <h2>BACKEND DEVELOPER</h2>
+            <p>
+                MICROSOFT - AHMEDABAD, GUJ
+            </p>
+            <section>
+                <h3>JOB DESCRIPTION</h3>
+                <p>
+                    We are seeking a talented Backend Developer to join our innovative team.
+                </p>
+            </section>
+            <section>
+                <h3>RESPONSIBILITIES</h3>
+                <p>
+                    - Design and implement server-side logic and APIs.
+                    - Optimize applications for maximum speed and scalability.
+                </p>
+            </section>
+            <section>
+                <h3>QUALIFICATIONS</h3>
+                <p>
+                    - Bachelor's degree in Computer Science or related field.
+                    - Strong knowledge of server-side languages and frameworks.
+                </p>
+            </section>
+            <section>
+                <h3>REQUIREMENTS</h3>
+                <p>
+                    - Experience with database management and data modeling.
+                    - Familiarity with cloud services and deployment processes.
+                </p>
+            </section>
+            <a href="new.html" aria-label="Apply for Backend developer at microsoft with all the qualifications and requirements.">
+                APPLY NOW   
+            </a>
+        </aside>
+    </main>
+    <footer>
+        <div class="footer-part">
+            <section aria-label="Quick-links">
+                <ul>
+                    <li><a href="new.html">jobs</a></li>
+                    <li><a href="new.html">companies</a></li>
+                    <li><a href="new.html">remote jobs</a></li>
+                    <li><a href="new.html">about us</a></li>
+                </ul>
+            </section>
+            <section aria-label="Contact-us">
+                <p>have any questions? reach us at
+                     <a href="mailto:vishvprajapati999@gmail.com">vishvprajapati999@gmail.com</a>
+                </p>
+            </section>
+        </div>
+        <p>&copy; 2026 JOB WEB DEMO. All rights reserved.</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

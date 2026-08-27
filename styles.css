@@ -1,0 +1,567 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #eef1f5;
+  --surface: #ffffff;
+  --text: #1c2029;
+  --muted: #5b6472;
+  --border: #dbe0e7;
+  --primary: #2c3e6b;
+  --primary-dark: #1f2c4d;
+  --accent: #e0a92d;
+  --accent-dark: #b98a1c;
+  --teal: #3f8f89;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --shadow:
+    0 1px 2px rgba(20, 24, 33, 0.06), 0 10px 25px rgba(20, 24, 33, 0.06);
+  --font-display: "Sora", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--primary-dark);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
+}
+
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+header nav img {
+  height: 32px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-transform: capitalize;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+header nav ul li a:hover {
+  color: var(--primary-dark);
+  border-color: var(--accent);
+}
+
+main {
+  max-width: 1200px;
+  margin: 32px auto 64px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-areas:
+    "search search"
+    "filters jobs"
+    "filters details1"
+    "filters details2";
+  gap: 20px 28px;
+}
+
+main > form[role="search"] {
+  grid-area: search;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+main > form[role="search"] label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+}
+
+main > form[role="search"] input[type="search"] {
+  width: 100%;
+  min-width: 220px;
+  flex: 1;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  background: #fafbfc;
+}
+
+main > form[role="search"] input[type="search"]:focus {
+  border-color: var(--teal);
+  background: #fff;
+}
+
+main > form[role="search"] button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 11px 22px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease;
+}
+
+main > form[role="search"] button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+section[aria-label="Job-filters"] {
+  grid-area: filters;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  align-self: start;
+  position: sticky;
+  top: 84px;
+}
+
+section[aria-label="Job-filters"] h3 {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+fieldset {
+  border: none;
+  border-top: 1px solid var(--border);
+  padding: 14px 0;
+  margin: 0;
+}
+
+fieldset:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+legend {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--primary-dark);
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+fieldset div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+}
+
+fieldset input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--teal);
+  cursor: pointer;
+}
+
+fieldset label {
+  font-size: 0.9rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+section[aria-label="Job-filters"] button[type="reset"] {
+  width: 100%;
+  margin-top: 8px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 9px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+section[aria-label="Job-filters"] button[type="reset"]:hover {
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+section[aria-label="Available jobs"] {
+  grid-area: jobs;
+}
+
+section[aria-label="Available jobs"] h2 {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+div[role="status"] {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+section[aria-label="Available jobs"] > ul[role="list"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+li[role="listitem"][hidden] {
+  display: none;
+}
+
+li[role="listitem"] article {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: 20px 22px;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+li[role="listitem"] article:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 6px rgba(20, 24, 33, 0.05),
+    0 16px 30px rgba(20, 24, 33, 0.09);
+}
+
+li[role="listitem"].is-selected article {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 2px rgba(63, 143, 137, 0.25);
+}
+
+li[role="listitem"] article > strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+li[role="listitem"] article > h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+li[role="listitem"] article > p:nth-of-type(1) {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+li[role="listitem"] article > p:nth-of-type(2) {
+  color: var(--primary-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+
+li[role="listitem"] article > ul[role="list"] {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0;
+  padding: 0;
+}
+
+li[role="listitem"] article > ul[role="list"] li {
+  background: #eef1f5;
+  color: var(--primary-dark);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+
+li[role="listitem"] article > p:nth-of-type(3) {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-bottom: 14px;
+}
+
+li[role="listitem"] article > a {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  padding: 9px 20px;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s ease;
+}
+
+li[role="listitem"] article > a:hover {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+aside[aria-label="Job Details"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: 26px 28px;
+}
+
+aside[aria-label="Job Details"]:nth-of-type(1) {
+  grid-area: details1;
+}
+
+aside[aria-label="Job Details"]:nth-of-type(2) {
+  grid-area: details2;
+}
+
+aside[aria-label="Job Details"] > h2 {
+  font-size: 1.25rem;
+}
+
+aside[aria-label="Job Details"] > p {
+  color: var(--muted);
+  font-weight: 500;
+  margin: 4px 0 18px;
+}
+
+aside[aria-label="Job Details"] section {
+  margin-bottom: 16px;
+}
+
+aside[aria-label="Job Details"] section h3 {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+
+aside[aria-label="Job Details"] section p {
+  color: var(--text);
+  font-size: 0.92rem;
+  white-space: pre-line;
+}
+
+aside[aria-label="Job Details"] > a {
+  display: inline-block;
+  margin-top: 6px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease;
+}
+
+aside[aria-label="Job Details"] > a:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+footer {
+  background: var(--primary-dark);
+  color: #cfd6e4;
+  margin-top: 40px;
+}
+
+footer .footer-part {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li a {
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+}
+
+footer ul li a:hover {
+  color: var(--accent);
+}
+
+footer a[href^="mailto"] {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+footer > p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #8b93a7;
+  padding-bottom: 24px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  font-size: 0.9rem;
+  max-width: 320px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "search"
+      "filters"
+      "jobs"
+      "details1"
+      "details2";
+  }
+
+  section[aria-label="Job-filters"] {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  main > form[role="search"] {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  main > form[role="search"] button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
